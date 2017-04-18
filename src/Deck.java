@@ -3,8 +3,21 @@ import java.util.List;
 public class Deck {
   List<Card> cards;
 
+  public Deck(int numberOfCards) {
+    for (int i = 0; i < numberOfCards; i++) {
+      if ((i + 4) % 4 == 0) {
+        this.cards.add(new Card(stringValue(), "Club"));
+      } else if ((i + 4) % 4 == 1) {
+        this.cards.add(new Card(stringValue(), "Diamond"));
+      } else if ((i + 4) % 4 == 2) {
+        this.cards.add(new Card(stringValue(), "Heart"));
+      } else {
+        this.cards.add(new Card(stringValue(), "Spade"));
+      }
+    }
+  }
 
-  String stringValue() {
+  private String stringValue() {
     int numValue = randomValue();
     if (numValue < 10) {
       return Integer.toString(numValue + 1);
@@ -21,7 +34,7 @@ public class Deck {
     }
   }
 
-  int randomValue() {
+  private int randomValue() {
     return (int) ((Math.random() * 13) + 1);
   }
 }
