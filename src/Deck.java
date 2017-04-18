@@ -1,9 +1,12 @@
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Deck {
   List<Card> cards;
 
   public Deck(int numberOfCards) {
+    cards = new ArrayList<>();
     for (int i = 0; i < numberOfCards; i++) {
       if ((i + 4) % 4 == 0) {
         this.cards.add(new Card(stringValue(), "Club"));
@@ -18,6 +21,7 @@ public class Deck {
   }
 
   public Card draw() {
+    Collections.shuffle(this.cards);
     Card toDraw = this.cards.get(this.cards.size() - 1);
     this.cards.remove(this.cards.size() - 1);
     return toDraw;
