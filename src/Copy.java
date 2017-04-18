@@ -12,7 +12,7 @@ public class Copy {
     } else if (args.length < 2) {
       System.out.println("No destination provided");
     } else {
-      writeFile(args[1], args[2]);
+      writeFile(args[0], args[1]);
     }
   }
 
