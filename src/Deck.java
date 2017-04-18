@@ -9,13 +9,13 @@ public class Deck {
     cards = new ArrayList<>();
     for (int i = 0; i < numberOfCards; i++) {
       if ((i + 4) % 4 == 0) {
-        this.cards.add(new Card(stringValue(), "Club"));
+        this.cards.add(new Card(nameOfTheCard(), "Club"));
       } else if ((i + 4) % 4 == 1) {
-        this.cards.add(new Card(stringValue(), "Diamond"));
+        this.cards.add(new Card(nameOfTheCard(), "Diamond"));
       } else if ((i + 4) % 4 == 2) {
-        this.cards.add(new Card(stringValue(), "Heart"));
+        this.cards.add(new Card(nameOfTheCard(), "Heart"));
       } else {
-        this.cards.add(new Card(stringValue(), "Spade"));
+        this.cards.add(new Card(nameOfTheCard(), "Spade"));
       }
     }
   }
@@ -51,7 +51,7 @@ public class Deck {
             + numberOfHearts + " Hearts, " + numberOfSpades + " Spades";
   }
 
-  private String stringValue() {
+  private String nameOfTheCard() {
     int numValue = randomValue();
     if (numValue < 10) {
       return Integer.toString(numValue + 1);
