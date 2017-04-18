@@ -17,6 +17,32 @@ public class Deck {
     }
   }
 
+  public Card draw() {
+    Card toDraw = this.cards.get(this.cards.size() - 1);
+    this.cards.remove(this.cards.size() - 1);
+    return toDraw;
+  }
+
+  private String countColors() {
+    int numberOfClubs = 0;
+    int numberOfDiamonds = 0;
+    int numberOfHearts = 0;
+    int numberOfSpades = 0;
+    for (Card card : this.cards) {
+      if (card.getColor().equals("Club")) {
+        numberOfClubs++;
+      } else if (card.getColor().equals("Diamond")) {
+        numberOfDiamonds++;
+      } else if (card.getColor().equals("Heart")) {
+        numberOfHearts++;
+      } else if (card.getColor().equals("Spade")) {
+        numberOfSpades++;
+      }
+    }
+    return numberOfClubs + " Clubs, " + numberOfDiamonds + " Diamonds, "
+            + numberOfHearts + " Hearts, " + numberOfSpades + " Spades";
+  }
+
   private String stringValue() {
     int numValue = randomValue();
     if (numValue < 10) {
@@ -36,5 +62,10 @@ public class Deck {
 
   private int randomValue() {
     return (int) ((Math.random() * 13) + 1);
+  }
+
+  @Override
+  public String toString() {
+    return Integer.toString(this.cards.size()) + " - " + this.countColors();
   }
 }
