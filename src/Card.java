@@ -13,6 +13,6 @@ public class Card {
 
   @Override
   public String toString() {
-    return value + " " + color;
+    return value + " " + color + "s";
   }
 }

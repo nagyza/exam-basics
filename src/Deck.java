@@ -3,7 +3,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class Deck {
-  List<Card> cards;
+  private List<Card> cards;
 
   public Deck(int numberOfCards) {
     cards = new ArrayList<>();
@@ -70,6 +70,6 @@ public class Deck {
 
   @Override
   public String toString() {
-    return Integer.toString(this.cards.size()) + " - " + this.countColors();
+    return Integer.toString(this.cards.size()) + " cards - " + this.countColors();
   }
 }
