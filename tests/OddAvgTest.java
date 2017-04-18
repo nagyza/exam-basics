@@ -23,4 +23,17 @@ class OddAvgTest {
     numbers.add(8);
     assertEquals(0, oddAvg.oddAverage(numbers));
   }
+
+  @Test
+  void oddAverageFractional() {
+    OddAvg oddAvg = new OddAvg();
+    List<Integer> numbers = new ArrayList<>();
+    numbers.add(2);
+    numbers.add(4);
+    numbers.add(8);
+    numbers.add(7);
+    numbers.add(11);
+    numbers.add(11);
+    assertEquals(9.666666666666666, oddAvg.oddAverage(numbers));
+  }
 }
