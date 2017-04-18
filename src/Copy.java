@@ -18,8 +18,8 @@ public class Copy {
 
 
 
-  private List<String> readFile(String fileName) {
-    Path filePath = Paths.get(fileName);
+  private List<String> readFile(String fileToRead) {
+    Path filePath = Paths.get(fileToRead);
     List<String> lines = new ArrayList<>();
     try {
       lines = Files.readAllLines(filePath);
