@@ -20,8 +20,12 @@ public class Deck {
     }
   }
 
-  public Card draw() {
+  public void shuffle() {
     Collections.shuffle(this.cards);
+  }
+
+  public Card draw() {
+    shuffle();
     Card toDraw = this.cards.get(this.cards.size() - 1);
     this.cards.remove(this.cards.size() - 1);
     return toDraw;
