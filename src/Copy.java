@@ -7,8 +7,16 @@ import java.util.List;
 
 public class Copy {
   public static void main(String[] args) {
+    if (args.length == 0) {
+      System.out.println("copy [source] [destination]");
+    } else if (args.length < 2) {
+      System.out.println("No destination provided");
+    } else {
 
+    }
   }
+
+
 
   private List<String> readFile(String fileName) {
     Path filePath = Paths.get(fileName);
