@@ -31,7 +31,7 @@ public class Copy {
     try {
       lines = Files.readAllLines(filePath);
     } catch (IOException e) {
-      System.out.println("Something wrong with the files which should be copied");
+      System.out.println("Something wrong with the file what should be copied");
     }
     return lines;
   }
