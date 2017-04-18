@@ -12,13 +12,20 @@ public class Copy {
     } else if (args.length < 2) {
       System.out.println("No destination provided");
     } else {
-
+      writeFile(args[1], args[2]);
     }
   }
 
+  private static void writeFile(String fileToRead, String fileToWrite) {
+    Path pathToWrite = Paths.get(fileToWrite);
+    try {
+      Files.write(pathToWrite, readFile(fileToRead));
+    } catch (IOException ex) {
+      System.out.println("Something wrong with the files.");
+    }
+  }
 
-
-  private List<String> readFile(String fileToRead) {
+  private static List<String> readFile(String fileToRead) {
     Path filePath = Paths.get(fileToRead);
     List<String> lines = new ArrayList<>();
     try {
