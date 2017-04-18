@@ -1,8 +1,6 @@
 import org.junit.jupiter.api.Test;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class OddAvgTest {
@@ -16,4 +14,13 @@ class OddAvgTest {
     assertEquals(5, oddAvg.oddAverage(numbers));
   }
 
+  @Test
+  void oddAverageNoOddNums() {
+    OddAvg oddAvg = new OddAvg();
+    List<Integer> numbers = new ArrayList<>();
+    numbers.add(2);
+    numbers.add(4);
+    numbers.add(8);
+    assertEquals(0, oddAvg.oddAverage(numbers));
+  }
 }
