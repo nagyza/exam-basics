@@ -37,13 +37,13 @@ The application is accepted if:
 #### Your answer:
 [add your answer here]   
 1: Declaration of a method   
-2: Type of the return value of the method
-3: Name of the method
-4: Type of the passed variable (passed by the call of the method, taken by the method) 
-5: Name of the passed variable within the method
-6: Declaration of the variable used within the the method. 
-7: Body of the method. Statements has to be here. If return value is expressible
- in one statement then body can be only the return line.
+2: Type of the return value of the method   
+3: Name of the method   
+4: Type of the passed variable (passed by the call of the method, taken by the method)    
+5: Name of the passed variable within the method   
+6: Declaration of the variable used within the the method.    
+7: Body of the method. Statements has to be here. If return value is expressible 
+ in one statement then body can be only the return line.   
 8: Return value or output of the method. 
 
 ### What is the constructor? When it is used? [2p]
